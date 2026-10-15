@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101012">
+  <meta name="description" content="Les jeux Paulogames, dont Paulogames F1.">
+  <title>Paulogames</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23e52532'/%3E%3Cpath d='M19 48V16h16c10 0 16 5 16 14S45 44 35 44H28v4zM28 35h7c4 0 6-2 6-5s-2-5-6-5h-7z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Paulogames, accueil">
+      <span class="brand-mark" aria-hidden="true">PG</span>
+      <span>PAULO<span class="brand-red">GAMES</span></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a class="nav-current" href="#accueil">Accueil</a>
+      <a href="#jeux">Jeux</a>
+    </nav>
+    <a class="header-play" href="#jeu-f1" id="header-play">Jouer à F1 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="accueil" class="page-content">
+    <section class="page-heading" aria-labelledby="page-title">
+      <p class="breadcrumb">PAULOGAMES <span>/</span> ACCUEIL</p>
+      <h1 id="page-title">Jeux</h1>
+      <p class="intro-text">Retrouve ici les jeux Paulogames.</p>
+    </section>
+
+    <section id="jeux" class="games-section" aria-label="Jeux disponibles">
+      <article class="game-card" id="jeu-f1">
+        <a class="game-image-link" id="f1-card-link" href="#jeu-f1" aria-label="Jouer à Paulogames F1">
+          <img class="game-image" src="assets/paulogames-f1-cover.webp" alt="Monoplace de course sur un circuit urbain au coucher du soleil">
+          <span class="image-shade" aria-hidden="true"></span>
+          <span class="image-category">COURSE · 3D</span>
+          <span class="image-title">PAULOGAMES <strong>F1</strong></span>
+          <span class="image-play" aria-hidden="true">▶</span>
+        </a>
+        <div class="game-details">
+          <div class="game-copy">
+            <h2>Paulogames F1</h2>
+            <p>Jeu de course automobile en 3D avec mode multijoueur.</p>
+            <div class="game-tags"><span>Course</span><span>3D</span><span>Multijoueur</span></div>
+          </div>
+          <a class="play-button" id="f1-play-button" href="#jeu-f1">Jouer <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <p class="link-status" id="link-status" hidden>Le lien du jeu n'est pas encore configuré dans <code>config.js</code>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#accueil">PAULOGAMES</a>
+    <span>© <span id="year">2026</span> Paulogames</span>
+  </footer>
+
+  <script>
+    (() => {
+      const configuredUrl = window.PAULOGAMES_CONFIG?.gameUrl?.trim() || "";
+      const hasGameUrl = /^https?:\/\//i.test(configuredUrl) && !configuredUrl.includes("REMPLACE_PAR");
+      const links = [document.getElementById("f1-card-link"), document.getElementById("f1-play-button"), document.getElementById("header-play")];
+      const status = document.getElementById("link-status");
+
+      if (hasGameUrl) {
+        links.forEach(link => {
+          link.href = configuredUrl;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+        });
+      } else {
+        links.forEach(link => link.addEventListener("click", event => {
+          event.preventDefault();
+          status.hidden = false;
+        }));
+      }
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
