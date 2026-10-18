@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101012">
-  <meta name="description" content="Les jeux Paulogames, dont Paulogames F1.">
+  <meta name="description" content="Les jeux Paulogames : Paulogames F1 et Opération Aigle Noir.">
   <title>Paulogames</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23e52532'/%3E%3Cpath d='M19 48V16h16c10 0 16 5 16 14S45 44 35 44H28v4zM28 35h7c4 0 6-2 6-5s-2-5-6-5h-7z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
@@ -20,7 +20,6 @@
       <a class="nav-current" href="#accueil">Accueil</a>
       <a href="#jeux">Jeux</a>
     </nav>
-    <a class="header-play" href="#jeu-f1" id="header-play">Jouer à F1 <span aria-hidden="true">↗</span></a>
   </header>
 
   <main id="accueil" class="page-content">
@@ -36,16 +35,28 @@
           <img class="game-image" src="assets/paulogames-f1-cover.webp" alt="Monoplace de course sur un circuit urbain au coucher du soleil">
           <span class="image-shade" aria-hidden="true"></span>
           <span class="image-category">COURSE · 3D</span>
-          <span class="image-title">PAULOGAMES <strong>F1</strong></span>
-          <span class="image-play" aria-hidden="true">▶</span>
         </a>
         <div class="game-details">
           <div class="game-copy">
-            <h2>Paulogames F1</h2>
             <p>Jeu de course automobile en 3D avec mode multijoueur.</p>
-            <div class="game-tags"><span>Course</span><span>3D</span><span>Multijoueur</span></div>
+            <div class="game-tags"><span>Course</span><span>3D</span><span>Solo</span><span>Multijoueur</span></div>
           </div>
           <a class="play-button" id="f1-play-button" href="#jeu-f1">Jouer <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="game-card" id="operation-aigle-noir">
+        <a class="game-image-link" href="https://paueym-lgtm.github.io/operation-aigle-noir/" target="_blank" rel="noopener noreferrer" aria-label="Jouer à Opération Aigle Noir">
+          <img class="game-image" src="assets/operation-aigle-noir-cover.webp" alt="Illustration cinématique d'une opération militaire avec hélicoptère et soldats">
+          <span class="image-shade" aria-hidden="true"></span>
+          <span class="image-category">ACTION · TACTIQUE</span>
+        </a>
+        <div class="game-details">
+          <div class="game-copy">
+            <p>Infiltre-toi, accomplis ta mission et reviens vivant. Un jeu d’action et de stratégie.</p>
+            <div class="game-tags"><span>Action</span><span>Tactique</span><span>Solo</span></div>
+          </div>
+          <a class="play-button" href="https://paueym-lgtm.github.io/operation-aigle-noir/" target="_blank" rel="noopener noreferrer">Jouer <span aria-hidden="true">↗</span></a>
         </div>
       </article>
       <p class="link-status" id="link-status" hidden>Le lien du jeu n'est pas encore configuré dans <code>config.js</code>.</p>
@@ -61,7 +72,7 @@
     (() => {
       const configuredUrl = window.PAULOGAMES_CONFIG?.gameUrl?.trim() || "";
       const hasGameUrl = /^https?:\/\//i.test(configuredUrl) && !configuredUrl.includes("REMPLACE_PAR");
-      const links = [document.getElementById("f1-card-link"), document.getElementById("f1-play-button"), document.getElementById("header-play")];
+      const links = [document.getElementById("f1-card-link"), document.getElementById("f1-play-button")];
       const status = document.getElementById("link-status");
 
       if (hasGameUrl) {

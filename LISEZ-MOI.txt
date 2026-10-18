@@ -1,14 +1,6 @@
-PAULOGAMES — PAGE D'ACCUEIL
+PAULOGAMES — PAGE D’ACCUEIL
 
-Fichiers
-- index.html : contenu de la page.
-- style.css : mise en page et affichage mobile.
-- config.js : adresse du jeu F1.
-- assets/paulogames-f1-cover.webp : visuel de la carte F1.
+Fichiers : index.html, style.css, config.js et assets/.
 
-Pour relier le bouton au jeu
-1. Ouvre config.js avec le Bloc-notes.
-2. Remplace REMPLACE_PAR_L_URL_RENDER_DE_TON_JEU par l'adresse publique de ton jeu, en gardant les guillemets.
-3. Publie tous les fichiers ensemble sur l'hébergement du site.
-
-Le visuel de la carte est une illustration promotionnelle, pas une capture réelle du gameplay.
+Les liens F1 sont configurés dans config.js. Le lien Opération Aigle Noir est intégré dans index.html.
+Publie tous ces fichiers ensemble sur GitHub Pages en conservant le dossier assets.
