@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101012">
-  <meta name="description" content="Les jeux Paulogames : Paulogames F1 et Opération Aigle Noir.">
-  <title>Paulogames</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23e52532'/%3E%3Cpath d='M19 48V16h16c10 0 16 5 16 14S45 44 35 44H28v4zM28 35h7c4 0 6-2 6-5s-2-5-6-5h-7z' fill='white'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="Découvre et lance les jeux créés par Paulogames.">
+  <title>Paulogames — Jeux</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23e52532'/%3E%3Cpath d='M19 48V16h16c10 0 16 5 16 14S45 44 35 44H28v4zM28 35h7c4 0 6-2 6-5s-2-5-6-5h-7z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
   <script src="config.js"></script>
 </head>
@@ -14,78 +14,56 @@
   <header class="site-header">
     <a class="brand" href="#accueil" aria-label="Paulogames, accueil">
       <span class="brand-mark" aria-hidden="true">PG</span>
-      <span>PAULO<span class="brand-red">GAMES</span></span>
+      <span class="brand-name">PAULO<span>GAMES</span></span>
     </a>
-    <nav aria-label="Navigation principale">
-      <a class="nav-current" href="#accueil">Accueil</a>
-      <a href="#jeux">Jeux</a>
-    </nav>
+    <span class="header-note"><span class="status-dot"></span> JEUX EN LIGNE</span>
   </header>
 
   <main id="accueil" class="page-content">
-    <section class="page-heading" aria-labelledby="page-title">
-      <p class="breadcrumb">PAULOGAMES <span>/</span> ACCUEIL</p>
-      <h1 id="page-title">Jeux</h1>
-      <p class="intro-text">Retrouve ici les jeux Paulogames.</p>
+    <section class="intro" aria-label="Présentation">
+      <p class="eyebrow">LE CATALOGUE PAULOGAMES</p>
+      <h1>À toi de <span>jouer.</span></h1>
+      <p class="intro-text">Choisis ton prochain jeu.</p>
     </section>
 
-    <section id="jeux" class="games-section" aria-label="Jeux disponibles">
-      <article class="game-card" id="jeu-f1">
-        <a class="game-image-link" id="f1-card-link" href="#jeu-f1" aria-label="Jouer à Paulogames F1">
-          <img class="game-image" src="assets/paulogames-f1-cover.webp" alt="Monoplace de course sur un circuit urbain au coucher du soleil">
-          <span class="image-shade" aria-hidden="true"></span>
-          <span class="image-category">COURSE · 3D</span>
+    <section id="jeux" class="games-grid" aria-label="Jeux disponibles">
+      <article class="game-card game-card-f1">
+        <a class="game-image-link" id="f1-card-link" href="https://paueym-lgtm.github.io/Formule-1/" aria-label="Lancer Paulogames F1">
+          <img class="game-image" src="assets/paulogames-f1-cover.webp" alt="Visuel de Paulogames F1" fetchpriority="high">
+          <span class="card-corner" aria-hidden="true">01 <span> / 02</span></span>
+          <span class="card-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <div class="game-details">
-          <div class="game-copy">
-            <p>Jeu de course automobile en 3D avec mode multijoueur.</p>
-            <div class="game-tags"><span>Course</span><span>3D</span><span>Solo</span><span>Multijoueur</span></div>
-          </div>
-          <a class="play-button" id="f1-play-button" href="#jeu-f1">Jouer <span aria-hidden="true">↗</span></a>
+        <div class="card-meta">
+          <div class="mode-list" aria-label="Modes de jeu"><span>SOLO</span><span>MULTIJOUEUR</span></div>
+          <span class="card-index">COURSE</span>
         </div>
       </article>
 
-      <article class="game-card" id="operation-aigle-noir">
-        <a class="game-image-link" href="https://paueym-lgtm.github.io/operation-aigle-noir/" target="_blank" rel="noopener noreferrer" aria-label="Jouer à Opération Aigle Noir">
-          <img class="game-image" src="assets/operation-aigle-noir-cover.webp" alt="Illustration cinématique d'une opération militaire avec hélicoptère et soldats">
-          <span class="image-shade" aria-hidden="true"></span>
-          <span class="image-category">ACTION · TACTIQUE</span>
+      <article class="game-card game-card-operation">
+        <a class="game-image-link" href="https://paueym-lgtm.github.io/operation-aigle-noir/" aria-label="Lancer Opération Aigle Noir">
+          <img class="game-image" src="assets/operation-aigle-noir-cover.webp" alt="Visuel d’Opération Aigle Noir" loading="eager">
+          <span class="card-corner" aria-hidden="true">02 <span> / 02</span></span>
+          <span class="card-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <div class="game-details">
-          <div class="game-copy">
-            <p>Infiltre-toi, accomplis ta mission et reviens vivant. Un jeu d’action et de stratégie.</p>
-            <div class="game-tags"><span>Action</span><span>Tactique</span><span>Solo</span></div>
-          </div>
-          <a class="play-button" href="https://paueym-lgtm.github.io/operation-aigle-noir/" target="_blank" rel="noopener noreferrer">Jouer <span aria-hidden="true">↗</span></a>
+        <div class="card-meta">
+          <div class="mode-list" aria-label="Mode de jeu"><span>SOLO</span></div>
+          <span class="card-index">ACTION</span>
         </div>
       </article>
-      <p class="link-status" id="link-status" hidden>Le lien du jeu n'est pas encore configuré dans <code>config.js</code>.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <a class="footer-brand" href="#accueil">PAULOGAMES</a>
-    <span>© <span id="year">2026</span> Paulogames</span>
+    <a class="footer-brand" href="#accueil">PAULOGAMES<span>®</span></a>
+    <span>JEUX INDÉPENDANTS · <span id="year">2026</span></span>
   </footer>
 
   <script>
     (() => {
       const configuredUrl = window.PAULOGAMES_CONFIG?.gameUrl?.trim() || "";
-      const hasGameUrl = /^https?:\/\//i.test(configuredUrl) && !configuredUrl.includes("REMPLACE_PAR");
-      const links = [document.getElementById("f1-card-link"), document.getElementById("f1-play-button")];
-      const status = document.getElementById("link-status");
-
-      if (hasGameUrl) {
-        links.forEach(link => {
-          link.href = configuredUrl;
-          link.target = "_blank";
-          link.rel = "noopener noreferrer";
-        });
-      } else {
-        links.forEach(link => link.addEventListener("click", event => {
-          event.preventDefault();
-          status.hidden = false;
-        }));
+      if (/^https?:\/\//i.test(configuredUrl) && !configuredUrl.includes("REMPLACE_PAR")) {
+        const link = document.getElementById("f1-card-link");
+        link.href = configuredUrl;
       }
       document.getElementById("year").textContent = new Date().getFullYear();
     })();
