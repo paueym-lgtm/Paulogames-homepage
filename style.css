@@ -91,7 +91,7 @@ h1 span { color: var(--red); }
 .intro-text { margin: 15px 0 0; color: var(--muted); font-size: 14px; }
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   padding-bottom: 76px;
 }
@@ -218,7 +218,7 @@ a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
   .site-header { height: 68px; padding-inline: 20px; }
   .page-content { width: calc(100% - 36px); }
   .intro { padding: 48px 0 27px; }
-  .games-grid { gap: 16px; padding-bottom: 54px; }
+  .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding-bottom: 54px; }
   .game-image-link { aspect-ratio: 4 / 3; }
   .card-meta { min-height: 62px; padding: 13px; }
   .mode-list { gap: 5px; }
