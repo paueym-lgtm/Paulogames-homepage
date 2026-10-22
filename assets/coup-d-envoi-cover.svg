@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07100e"/><stop offset=".55" stop-color="#10251e"/><stop offset="1" stop-color="#030706"/></linearGradient>
+  <linearGradient id="field" x2="1" y2="0"><stop stop-color="#16442f"/><stop offset=".5" stop-color="#286843"/><stop offset="1" stop-color="#103a29"/></linearGradient>
+  <linearGradient id="orange" x2="1" y2="1"><stop stop-color="#ff9951"/><stop offset="1" stop-color="#ff5923"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#ff6a2b" stop-opacity=".28"/><stop offset="1" stop-color="#ff6a2b" stop-opacity="0"/></radialGradient>
+  <pattern id="lines" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#fff" stroke-opacity=".035" stroke-width="1"/></pattern>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="24"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<rect width="1600" height="1000" fill="url(#lines)"/>
+<ellipse cx="1170" cy="470" rx="510" ry="460" fill="url(#glow)"/>
+<g transform="translate(725 115) rotate(-13 400 390)">
+  <rect x="0" y="0" width="980" height="780" rx="12" fill="#07110d" stroke="#a7c1af" stroke-opacity=".28" stroke-width="3"/>
+  <rect x="22" y="22" width="936" height="736" fill="url(#field)"/>
+  <path d="M490 22V758M22 390H958" fill="none" stroke="#e7f3e9" stroke-opacity=".72" stroke-width="3"/>
+  <ellipse cx="490" cy="390" rx="116" ry="116" fill="none" stroke="#e7f3e9" stroke-opacity=".72" stroke-width="3"/>
+  <circle cx="490" cy="390" r="5" fill="#e7f3e9"/>
+  <path d="M22 188H174V592H22M958 188H806V592H958" fill="none" stroke="#e7f3e9" stroke-opacity=".72" stroke-width="3"/>
+  <path d="M22 284H84V496H22M958 284H896V496H958" fill="none" stroke="#e7f3e9" stroke-opacity=".72" stroke-width="3"/>
+  <path d="M174 285A116 116 0 0 1 174 495M806 285A116 116 0 0 0 806 495" fill="none" stroke="#e7f3e9" stroke-opacity=".72" stroke-width="3"/>
+  <path d="M22 335H9V445H22M958 335H971V445H958" fill="none" stroke="#e7f3e9" stroke-opacity=".8" stroke-width="4"/>
+  <g fill="#f2f8f0" opacity=".88">
+    <circle cx="278" cy="250" r="10"/><circle cx="355" cy="305" r="10"/><circle cx="290" cy="428" r="10"/><circle cx="415" cy="485" r="10"/>
+    <circle cx="605" cy="264" r="10"/><circle cx="710" cy="365" r="10"/><circle cx="628" cy="485" r="10"/><circle cx="790" cy="530" r="10"/>
+  </g>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" fill="#f1f4eb">
+  <text x="88" y="118" font-size="22" font-weight="700" letter-spacing="7" fill="#ff7a3b">PAULOGAMES / SPORT</text>
+  <text x="78" y="360" font-size="132" font-weight="900" letter-spacing="-4">COUP</text>
+  <text x="78" y="492" font-size="132" font-weight="900" letter-spacing="-5" fill="url(#orange)">D'ENVOI</text>
+  <rect x="84" y="536" width="100" height="8" rx="4" fill="#ff6a2b"/>
+  <text x="84" y="594" font-size="27" font-weight="700" letter-spacing="4" fill="#d8e2d9">SOCCER · 11 CONTRE 11</text>
+  <text x="84" y="641" font-size="20" letter-spacing="2" fill="#a7b7ac">CHOISIS TON CLUB. PRENDS LE CONTRÔLE.</text>
+</g>
+<g transform="translate(1290 790)">
+  <ellipse cx="0" cy="38" rx="104" ry="28" fill="#000" opacity=".38" filter="url(#shadow)"/>
+  <circle cx="0" cy="0" r="93" fill="#f0f2ea" stroke="#c5cec3" stroke-width="5"/>
+  <g fill="#19201c" stroke="#19201c" stroke-linejoin="round">
+    <path d="M0-39 34-17 21 22-21 22-34-17Z"/>
+    <path d="M-34-17-59-51-84-32-72 7-44 11Z"/>
+    <path d="M34-17 59-51 84-32 72 7 44 11Z"/>
+    <path d="M-21 22-47 47-25 80 0 70 0 42Z"/>
+    <path d="M21 22 47 47 25 80 0 70 0 42Z"/>
+  </g>
+  <g stroke="#343b36" stroke-width="5" fill="none"><path d="M-34-17 0-39 34-17M-21 22 0 42 21 22M-59-51-34-17M59-51 34-17M-47 47-21 22M47 47 21 22"/></g>
+</g>
+<text x="1515" y="955" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="#a3b1a6">01 — MATCHDAY</text>
+</svg>
